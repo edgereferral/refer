@@ -12,7 +12,12 @@
 </style>
 </head>
 <body>
-  <!-- Replace https://script.google.com/macros/s/AKfycbzCmCXMAZ3unVDE242pwAGDqBrQdL5KyeSm6e0sLacYvnT9Tv17Yu_KTHNYJCvr0V1Cdw/exec with the web app link that ends in /exec -->
-  <iframe src="https://script.google.com/macros/s/AKfycbzCmCXMAZ3unVDE242pwAGDqBrQdL5KyeSm6e0sLacYvnT9Tv17Yu_KTHNYJCvr0V1Cdw/exec" title="EDGE Referral Program" allow="clipboard-write"></iframe>
+  <!-- The EDGE Referral app. Referral links (?r=CODE) are passed through to it. -->
+  <iframe id="app" title="EDGE Referral Program" allow="clipboard-write"></iframe>
+  <script>
+    var APP = 'https://script.google.com/macros/s/AKfycbzCmCXMAZ3unVDE242pwAGDqBrQdL5KyeSm6e0sLacYvnT9Tv17Yu_KTHNYJCvr0V1Cdw/exec';
+    var r = new URLSearchParams(location.search).get('r');
+    document.getElementById('app').src = APP + (r ? '?r=' + encodeURIComponent(r) : '');
+  </script>
 </body>
 </html>
