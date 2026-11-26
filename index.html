@@ -41,11 +41,8 @@ button{font-family:inherit}
 .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(20px,4vw,48px) 0 clamp(28px,4vw,56px)}
 .kicker{color:var(--teal);font-weight:700;font-size:clamp(28px,4.2vw,54px);line-height:1.05;margin:0;letter-spacing:-.5px}
 .big{position:relative;display:inline-block;margin:6px 0 0}
-.amount{font-weight:800;font-size:clamp(84px,11vw,168px);line-height:.92;letter-spacing:-4px;
-  background:linear-gradient(170deg,rgba(255,255,255,.75) 0%,rgba(122,240,190,.55) 18%,rgba(59,181,182,.38) 55%,rgba(25,62,89,.55) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  -webkit-text-stroke:1.5px rgba(160,255,215,.35);filter:drop-shadow(0 10px 30px rgba(66,228,150,.25))}
-.for{font-size:clamp(26px,3.6vw,44px);font-weight:700;color:var(--teal);line-height:1.1;margin:8px 0 0}
+.amount{font-weight:800;font-size:clamp(84px,11vw,168px);line-height:.92;letter-spacing:-4px;color:#FFFFFF;text-shadow:0 0 40px rgba(66,228,150,.45),0 8px 30px rgba(13,23,56,.35)}
+.for{font-size:clamp(22px,3.6vw,44px);font-weight:700;color:var(--teal);line-height:1.15;margin:8px 0 0;text-wrap:balance}
 .for sup{font-size:.5em}
 .lead{color:#fff;font-size:clamp(17px,1.7vw,21px);line-height:1.5;margin:18px 0 0;max-width:34ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
@@ -61,7 +58,7 @@ button{font-family:inherit}
 .step b{font-size:24px;color:var(--teal);white-space:nowrap;flex:none}
 .step span{font-size:14px;color:var(--soft);line-height:1.4}
 .split p{margin:14px 0 0;font-size:13.5px;color:var(--soft)}
-@media(max-width:900px){.hero{grid-template-columns:1fr}}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero>div:first-child{text-align:center}.hero .lead,.hero .fine{margin-left:auto;margin-right:auto}.hero .cta{justify-content:center}}
 
 /* Stats (from edgetutor.co) */
 .world{margin-top:56px;position:relative;overflow:hidden;border-radius:28px;padding:clamp(26px,4vw,48px);background:linear-gradient(135deg,rgba(66,228,150,.28),rgba(59,181,182,.16) 45%,rgba(25,62,89,.55));border:1px solid rgba(66,228,150,.35)}
@@ -188,7 +185,6 @@ td{padding:10px 12px;border-bottom:1px solid var(--line)}
       <button class="l" data-open="faqs">FAQs</button>
       <button class="l" data-open="payout">Payout calendar</button>
       <button class="l" data-open="guidelines">Guidelines</button>
-      <button class="pillbtn" data-open="fara">Talk to Fara</button>
     </div>
   </nav>
 
@@ -202,8 +198,7 @@ td{padding:10px 12px;border-bottom:1px solid var(--line)}
       <p class="for">for every teacher you refer<sup>*</sup></p>
       <p class="lead">Across all accounts. Paid in two halves. Share your unique referral link today.</p>
       <div class="cta">
-        <button class="btn p" data-app>Get your link in the new portal</button>
-        <button class="btn o" data-app>Track your referrals</button>
+        <button class="btn p" data-app>Generate your referral link</button>
       </div>
       <p class="fine" id="heroFine"></p>
     </div>
